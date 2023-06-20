@@ -5,7 +5,7 @@ from tabulate import tabulate
 all_args =sys.argv
 args = all_args[1:]
 
-if args[0] == "--Register":
+if args[0] == "--register":
     name = input("Enter Your Name: ")
     father_name = input("Enter your Father name: ")
     user_name  = input("Enter user name: ")
