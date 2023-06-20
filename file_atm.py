@@ -103,10 +103,10 @@ elif  args[0] == "--login":
                                                     print(f"{withdrawal} Withdrawal successful!!")
 
                                             elif withdrawal < 0:
-                                                raise Exception("Invalid amount\nAmount should be >0")
+                                                sys.exit("Invalid amount\nAmount should be >0")
 
                                             elif withdrawal > int(amount[1]):
-                                                raise Exception("Low Account Balance")
+                                                sys.exit("Low Account Balance")
 
                             elif user_input == 4:
                                 with open(f'{name2}',"r") as f:
@@ -176,23 +176,23 @@ elif  args[0] == "--login":
                                                                         print("Amount Transfer successful!!")
 
                                                     elif transfer_amount < 0:
-                                                        raise Exception("Invalid amount\nAmount should be >0")
+                                                        sys.exit("Invalid amount\nAmount should be >0")
 
                                                     elif transfer_amount > int(amount[1]) :
-                                                        raise Exception("Low account Balance\n amount Transfer fail")
+                                                        sys.exit("Low account Balance\n amount Transfer fail")
 
                                         break
 
                                 else:
-                                    raise Exception("NO recipent avalibel of this user name\nCheck recipent user name and try again")
+                                    sys.exit("NO recipent avalibel of this user name\nCheck recipent user name and try again")
 
                         else:
-                            raise Exception("wrong password")
+                            sys.exit("wrong password")
 
             break
 
     else:
-        raise Exception("No account avalible on your this user_name\nRegister yourself")
+        sys.exit("No account avalible on your this user_name\nRegister yourself")
 
 
 elif args[0] == "--help":
