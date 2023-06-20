@@ -24,7 +24,7 @@ if args[0] == "--register":
             print("hello")
 
         else:
-            raise Exception("user_name is  already avalible\n Try another user name")
+            sys.exit("user_name is  already avalible\n Try another user name")
 
 elif  args[0] == "--login":
     name2 = input("Enter user name: ")
